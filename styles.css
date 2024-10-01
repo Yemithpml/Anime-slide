@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(5, 5, 5);
+    color: #fff;
+
+}
+.container{
+    display: flex;
+    width: 100vw;
+}
+.bg-image{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.image-1{
+    background-image: url(images/three-way-naruto-split-with-sasuke-and-sakura-naruto-and-jiraiya-and-kazikage-gaara.avif);
+}
+.image-2{
+    background-image: url(images/9034921-5061012780-Bleac.jpg);
+}
+.image-3{
+    background-image: url(images/AoT-Season-4-Feature.avif);
+}
+.image-4{
+    background-image: url(images/JJK-header-mobile2.webp);
+}
+.image-5{
+    background-image: url(images/Anime_DemonSlayer_AllHashira_2.jpg);
+}
+
+.slider{
+    position: relative;
+    height: 80vh;
+    flex: 0.5;
+    border-radius: 50px;
+    color: #fff;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 700ms ease-in;
+}
+.slider h3{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    font-size: 24px;
+}
+
+@media (max-width: 480px) {
+    .slider:nth-of-type(4),
+    .slider:nth-of-type(5){
+        display: none;
+    }
+}
+
+.slider.active{
+    flex: 5;
+}
+.slider.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
